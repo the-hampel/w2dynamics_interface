@@ -3,7 +3,8 @@ def projectName = "w2dynamics_interface" /* set to app/repo name */
 /* which platform to build documentation on */
 def documentationPlatform = "ubuntu-clang"
 /* depend on triqs upstream branch/project */
-def triqsBranch = env.CHANGE_TARGET ?: env.BRANCH_NAME
+/* def triqsBranch = env.CHANGE_TARGET ?: env.BRANCH_NAME */
+def triqsBranch = "unstable"
 def triqsProject = '/TRIQS/triqs/' + triqsBranch.replaceAll('/', '%2F')
 /* whether to keep and publish the results */
 def keepInstall = !env.BRANCH_NAME.startsWith("PR-")
